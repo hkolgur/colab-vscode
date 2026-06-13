@@ -39,6 +39,20 @@ A Jupyter notebook exploring two statistical concepts: correlation analysis of s
    jupyter notebook stock-analysis-height-analysis.ipynb
    ```
 
+## Testing
+
+The repository includes a pytest test suite that validates the statistical computations:
+
+```bash
+python3 -m pytest tests/ -v
+```
+
+**Test Coverage:**
+- **`test_stock_correlation.py`** (8 tests): Validates covariance, standard deviation, and Pearson correlation calculations against NumPy and SciPy ground truth
+- **`test_clt_simulation.py`** (5 tests): Validates Central Limit Theorem simulation logic, sampling behavior, and error reduction with larger sample sizes
+
+All tests use seeded random numbers or hardcoded data for reproducibility.
+
 ## Development Notes
 
 - This notebook was developed in VS Code using the Colab extension
